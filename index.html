@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#000000" />
+  <link rel="icon" href="data:;base64,iVBORwOKGO=" />
+  
+<title>QR CODE SCANNER</title>
+  <style>
+    body{
+      background-color: #000000;
+      color :#ffffff;
+    }
+    video {
+      width: 100%    !important;
+      height: auto   !important;
+    }
+    .btn{
+      margin-top:5px;
+      margin-bottom:10px;
+      padding:5px;
+      background-color: #f2f2f2;
+      color: #000000;
+      border-radius:3px;
+      width: 150px;
+      cursor: pointer;
+    }
+    .camera{
+      width: 100%;
+    }
+    a{
+      text-decoration: none;
+      color:#20a8d8;
+    }
+    #powered{
+        display: none !important;
+    }
+  </style>
+<script type="text/javascript" src="/llqrcode.js"></script>
+<script type="text/javascript" src="/mikhmon_webqr.js"></script>
+<!--<script async src="/arc.js"></script>  -->
+</head>
+<body>
+  <center>
+    <div id="main">
+      <div id="mainbody">
+        <div class="camera" id="outdiv"></div>
+        <div style="display: table;">
+          <div style="display: table-row;">
+            <div style="display: table-cell; padding:3px;">
+              <div class="btn" id="reload" onclick="location.reload();">Reload Camera</div>
+            </div>
+            <div style="display: table-cell; padding:3px;">
+              <a class="btn" href="intent://scan.halalghor.com#Intent;scheme=http;package=com.android.chrome;end">Open in Chrome</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </center>
+<canvas style="display:none;" id="qr-canvas" width="800" height="600"></canvas>
+<script type="text/javascript">load();</script>
+</body>
+</html>
+
